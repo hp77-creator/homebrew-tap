@@ -9,7 +9,7 @@ cask "rockstar" do
 
   depends_on macos: ">= :ventura" # Based on LSMinimumSystemVersion in Info.plist (13.0)
 
-  app "Rockstar.app"
+  app "ClipboardManager.app"
 
   zap trash: [
     "~/Library/Application Support/Rockstar",
