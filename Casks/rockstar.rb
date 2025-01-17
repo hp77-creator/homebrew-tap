@@ -12,6 +12,17 @@ cask "rockstar" do
   conflicts_with cask: "clipboardmanager"
   app "ClipboardManager.app"
 
+  caveats <<~EOS
+    When launching Rockstar for the first time, macOS may show a security warning.
+    To resolve this:
+    1. Right-click (or Control-click) on the app in Finder
+    2. Select "Open" from the context menu
+    3. Click "Open Anyway" in the security dialog / You might have to allow it to run from your settings under 
+    security tab in `Allow applications from` option
+    
+    This is a one-time process required by macOS security features.
+  EOS
+
   zap trash: [
     "~/Library/Application Support/Rockstar",
     "~/Library/Preferences/com.hp77.ClipboardManager.plist",
